@@ -13,7 +13,11 @@ nav ul li a { color: white; text-decoration: none; font-weight: bold; }
 nav ul li a:hover { text-decoration: underline; }
 section { padding: 40px; text-align: center; background-color: lightpink; }
 h1, h2 { color: #333; }
-.contact-info { font-size: 18px; line-height: 1.6; }
+form { display: inline-block; text-align: left; background: #fff0f5; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2); }
+label { display: block; margin-top: 10px; }
+input, textarea { width: 300px; padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
+button { margin-top: 15px; background-color: gold; color: white; padding: 10px 15px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+button:hover { background-color: #f4c542; }
 </style>
 </head>
 <body>
@@ -29,12 +33,20 @@ h1, h2 { color: #333; }
 
 <section>
   <h1>Contact Us</h1>
-  <p class="contact-info">
-    Email: <a href="mailto:yourname@example.com">yourname@example.com</a><br>
-    Phone: (123) 456-7890<br>
-    
-  </p>
-  <p>We’d love to hear from you! Reach out to ask questions about our handmade jewelry.</p>
+  <p>Fill out the form below to send us a message directly!</p>
+
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="_replyto" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 </body>
