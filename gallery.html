@@ -13,7 +13,11 @@ nav ul li a { color: white; text-decoration: none; font-weight: bold; }
 nav ul li a:hover { text-decoration: underline; }
 section { padding: 40px; text-align: center; background-color: lightpink; }
 h1, h2 { color: #333; }
-.gallery img { width: 200px; margin: 10px; border-radius: 10px; border: 2px solid gold; }
+.gallery { display: flex; flex-wrap: wrap; justify-content: center; }
+.product { margin: 20px; text-align: center; background-color: #fff0f5; padding: 15px; border-radius: 10px; width: 220px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2); }
+.product img { width: 200px; border-radius: 10px; }
+.pay-button { margin-top: 10px; display: inline-block; background-color: gold; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+.pay-button:hover { background-color: #f4c542; }
 </style>
 </head>
 <body>
@@ -28,12 +32,31 @@ h1, h2 { color: #333; }
 
 <section>
   <h1>Our Jewelry Gallery</h1>
-  <p>Check out some of our favorite handmade bracelets and creations!</p>
+  <p>Click “Pay Now” to order your favorite bracelet!</p>
+
   <div class="gallery">
-    <img src="https://via.placeholder.com/200?text=Bracelet1" alt="Bracelet 1">
-    <img src="https://via.placeholder.com/200?text=Bracelet2" alt="Bracelet 2">
-    <img src="https://via.placeholder.com/200?text=Bracelet3" alt="Bracelet 3">
-    <img src="https://via.placeholder.com/200?text=Bracelet4" alt="Bracelet 4">
+
+    <div class="product">
+      <img src="https://via.placeholder.com/200?text=Bracelet1" alt="Bracelet 1">
+      <h3>Bracelet 1</h3>
+      <p>Price: $10</p>
+      <a href="https://paypal.com/pay?item=bracelet1" target="_blank" class="pay-button">Pay Now</a>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/200?text=Bracelet2" alt="Bracelet 2">
+      <h3>Bracelet 2</h3>
+      <p>Price: $12</p>
+      <a href="https://paypal.com/pay?item=bracelet2" target="_blank" class="pay-button">Pay Now</a>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/200?text=Bracelet3" alt="Bracelet 3">
+      <h3>Bracelet 3</h3>
+      <p>Price: $15</p>
+      <a href="https://paypal.com/pay?item=bracelet3" target="_blank" class="pay-button">Pay Now</a>
+    </div>
+
   </div>
 </section>
 
