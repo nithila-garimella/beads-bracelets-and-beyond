@@ -1,113 +1,100 @@
-/* ===========================
-   General Page Styles
-=========================== */
+/* Base */
+* { box-sizing: border-box; }
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #fff;
   color: #333;
+  background: #fff;
 }
 
-/* ===========================
-   Header & Navigation
-=========================== */
+/* Header / Nav */
 header {
-  background-color: #f2f2f2;
-  padding: 15px 0;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
+  background-color: #ffd700; /* gold */
+  border-bottom: 1px solid #e6c700;
 }
-
 .nav-menu {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
   margin: 0;
-  padding: 0;
+  padding: 14px 12px;
 }
-
-.nav-menu li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
 .nav-menu a {
+  color: #ffffff;           /* white text on gold */
   text-decoration: none;
-  color: #333;
   font-weight: bold;
   font-size: 18px;
-  transition: color 0.3s ease;
 }
-
 .nav-menu a:hover {
-  color: #ff6600; /* Orange hover color */
+  text-decoration: underline;
 }
 
-/* ===========================
-   Gallery Styles
-=========================== */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.gallery-item {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #fafafa;
+/* Sections */
+section {
+  padding: 40px 20px;
+  background: #ffe4e9;      /* light pink */
   text-align: center;
-  padding: 10px;
+}
+section.white {
+  background: #ffffff;
 }
 
-.gallery-item img {
+/* Gallery */
+.gallery {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #f2b6c4;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+.card img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
+}
+.card h3 { margin: 10px 0 6px; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #ffd700;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover { filter: brightness(0.95); }
+
+/* Contact form */
+.form {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #f2b6c4;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+}
+.form label { display: block; margin-top: 12px; font-weight: bold; }
+.form input, .form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
   border-radius: 8px;
 }
-
-.gallery-item h3 {
-  margin: 10px 0;
-  font-size: 18px;
-}
-
-.gallery-item p {
-  font-size: 16px;
-  color: #555;
-}
-
-/* ===========================
-   Contact Form Styles
-=========================== */
-.contact-form {
-  max-width: 500px;
-  margin: 30px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background: #f9f9f9;
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.contact-form button {
-  background-color: #ff6600;
-  color: #fff;
-  border: none;
+.form button {
+  margin-top: 16px;
+  border: 0;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.contact-form button:hover {
-  background-color: #e55b00;
 }
